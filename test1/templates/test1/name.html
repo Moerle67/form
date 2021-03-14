@@ -1,0 +1,9 @@
+{% extends "test1\index.html" %}
+{% block content %}
+<h1>Eingabe Name</h1>
+<form action="/name/" method="post">
+    {% csrf_token %}
+    {{ form }}
+    <input type="submit" value="Submit">
+</form>
+{% endblock content %}
